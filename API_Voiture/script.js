@@ -67,9 +67,11 @@ $(liste_button).on("click", List);
       data: {
         id: $("#id").val()
       },
-      success: function(list) {}
+      success: function(list) {
+        List();
+      }
     });
-    List();
+    
   }
 
   var update = $("#modifier");
@@ -86,10 +88,11 @@ $(liste_button).on("click", List);
         prix: $("#prix").val()
       },
       success: function(list) {
+        List();
       },
       dataType: "json"
     });
-    List();
+    
   }
 
   var creat = $("#creat");
@@ -105,10 +108,11 @@ $(liste_button).on("click", List);
         prix: $("#prix2").val()
       },
       success: function(list) {
+        List();
       },
       dataType: "json"
     });
-    List();
+    
   }
 
 
